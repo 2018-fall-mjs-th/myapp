@@ -14,28 +14,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   mytitle = 'myapp123456';
 
-
-   quizzes = [
-    "Quiz 1"
-    , "Quiz 2"
-    , "Quiz 3"
+  quizzes = [
+    { name: 'Quiz 1' }
+    , { name: 'Quiz 2' }
+    , { name: 'Quiz 3' }
   ];
 
-  // addFunnyQuiz() {
-  //   window.alert('sdgsgf');  
-  // }
-
-  //addFunnyQuiz = () => window.alert('asdf');
-
-  //addFunnyQuiz = () => this.quizzes.push("Funny Quiz");
-
-  addFunnyQuiz = () => this.quizzes = ["Modern Funny Quiz", ...this.quizzes];
-
-  //addQuiz = () => window.alert(this.newQuizName);
+  addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz" }, ...this.quizzes];
 
   addQuiz = () => {
     console.log(this.newQuizName);
-    this.quizzes = [...this.quizzes, this.newQuizName];
+    this.quizzes = [...this.quizzes, { name: this.newQuizName }];
     this.newQuizName = "";
   };
 

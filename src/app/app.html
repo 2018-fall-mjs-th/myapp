@@ -9,7 +9,8 @@
 <h2>Quizzes</h2>
 
 <ul>
-  <li *ngFor="let q of quizzes">{{ q }}</li>
+  <!-- *ngFor="let * of _" is the Angular for-each syntax -->
+  <li *ngFor="let q of quizzes">{{ q.name }} <button>Delete</button></li>
 </ul>
 
 <button (click)="addFunnyQuiz()">Add Funny Quiz</button>

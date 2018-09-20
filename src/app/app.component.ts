@@ -14,18 +14,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   mytitle = 'Sylvie\'s app';
 
-
-/*    quizzes = [
-    "Quiz 1"
-    , "Quiz 2"
-    , "Quiz 3"
-  ]; */
-
   // let's make quizzes an array of objects instead of strings
   quizzes = [
-    { name: "Quiz 1" }
-    , { name: "Quiz 2" }
-    , { name: "Quiz 3" }
+    { name: "Quiz 1", canDelete: false }
+    , { name: "Quiz 2", canDelete: false }
+    , { name: "Quiz 3", canDelete: false }
   ];
 
   // addFunnyQuiz() {
@@ -36,13 +29,13 @@ export class AppComponent {
 
   //addFunnyQuiz = () => this.quizzes.push("Funny Quiz");
 
-  addFunnyQuiz = () => this.quizzes = [{name: "Modern Funny Quiz"}, ...this.quizzes];
+  addFunnyQuiz = () => this.quizzes = [{name: "Modern Funny Quiz", canDelete: false}, ...this.quizzes];
 
   //addQuiz = () => window.alert(this.newQuizName);
 
   addQuiz = () => {
     console.log(this.newQuizName);
-    this.quizzes = [...this.quizzes, {name: this.newQuizName}];
+    this.quizzes = [...this.quizzes, {name: this.newQuizName, canDelete: true}];
     this.newQuizName = "";
   };
 

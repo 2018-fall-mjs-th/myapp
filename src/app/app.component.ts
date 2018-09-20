@@ -44,9 +44,9 @@ export class AppComponent {
 
   /* ILEMKE: New code to add a delete button for new entries*/
   quizzes = [
-    {name: "Quiz 1"},
-    {name: "Quiz 2"},
-    {name: "Quiz 3"}
+    { name: "Quiz 1" },
+    { name: "Quiz 2" },
+    { name: "Quiz 3" }
   ];
 
   addQuiz = () => {

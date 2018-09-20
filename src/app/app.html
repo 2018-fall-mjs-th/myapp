@@ -10,8 +10,9 @@
 <br>
 <h2>Quizzes</h2>
 
+<!-- TODO: Add delete button to only new entries -->
 <ul>
-  <li *ngFor="let q of quizzes">{{ q }}</li>
+  <li *ngFor="let q of quizzes">{{ q.name }}</li>
 </ul>
 
 <button (click)="addFunnyQuiz()">Add Funny Quiz</button>

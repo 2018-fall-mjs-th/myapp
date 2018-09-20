@@ -15,10 +15,10 @@ export class AppComponent {
   mytitle = 'myapp123456';
 
 
-   quizzes = [
-    "Quiz 1"
-    , "Quiz 2"
-    , "Quiz 3"
+  quizzes = [
+    { name: "Quiz 1" }
+    , { name: "Quiz 2" }
+    , { name: "Quiz 3" }
   ];
 
   // addFunnyQuiz() {
@@ -29,13 +29,13 @@ export class AppComponent {
 
   //addFunnyQuiz = () => this.quizzes.push("Funny Quiz");
 
-  addFunnyQuiz = () => this.quizzes = ["Modern Funny Quiz", ...this.quizzes];
+  addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz" } , ...this.quizzes];
 
   //addQuiz = () => window.alert(this.newQuizName);
 
   addQuiz = () => {
     console.log(this.newQuizName);
-    this.quizzes = [...this.quizzes, this.newQuizName];
+    this.quizzes = [...this.quizzes, { name: this.newQuizName }];
     this.newQuizName = "";
   };
 

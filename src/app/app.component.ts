@@ -15,9 +15,9 @@ export class AppComponent {
   mytitle = 'myapp';
 
   quizzes = [
-    { name: "Quiz 1" }
-    , { name: "Quiz 2" }
-    , { name: "Quiz 3" }
+    { name: "Quiz 1", canDelete: false }
+    , { name: "Quiz 2", canDelete: false }
+    , { name: "Quiz 3", canDelete: false }
   ];
 
   // addFunnyQuiz() {
@@ -28,13 +28,13 @@ export class AppComponent {
 
   //addFunnyQuiz = () => this.quizzes.push("Funny Quiz");
 
-  addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz" }, ...this.quizzes]; //spread operator
+  addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz", canDelete: true }, ...this.quizzes]; //spread operator
 
   //addQuiz = () => window.alert(this.newQuizName);
 
   addQuiz = () => {
     console.log(this.newQuizName);
-    this.quizzes = [...this.quizzes, { name: this.newQuizName }];
+    this.quizzes = [...this.quizzes, { name: this.newQuizName, canDelete: true }];
     this.newQuizName = "";
   };
 

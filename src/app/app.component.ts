@@ -10,18 +10,18 @@ export class AppComponent {
 
 
   quizzes = [
-    { name: "Quiz 1" }
-    , { name: "Quiz 2" }
-    , { name: "Quiz 3" }
+    { name: "Quiz 1", canDelete: false }
+    , { name: "Quiz 2", canDelete: false }
+    , { name: "Quiz 3", canDelete: false }
   ];
 
 
-  addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz" }, ...this.quizzes];
+  addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz", canDelete: false }, ...this.quizzes];
 
 
   addQuiz = () => {
     console.log(this.newQuizName);
-    this.quizzes = [...this.quizzes, { name: this.newQuizName }];
+    this.quizzes = [...this.quizzes, { name: this.newQuizName, canDelete: true }];
     this.newQuizName = "";
   };
 

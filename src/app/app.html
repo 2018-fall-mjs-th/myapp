@@ -10,7 +10,8 @@
 
 <ul>
   <!-- *ngFor="let * of _" is the Angular for-each syntax -->
-  <li *ngFor="let q of quizzes">{{ q.name }} <button>Delete</button></li>
+  <!-- *ngIf="boolean" is the Angular if syntax-->
+  <li *ngFor="let q of quizzes">{{ q.name }} <button *ngIf="q.canDelete">Delete</button></li>
 </ul>
 
 <button (click)="addFunnyQuiz()">Add Funny Quiz</button>

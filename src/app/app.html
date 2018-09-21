@@ -12,7 +12,7 @@
 
 <!-- TODO: Add delete button to only new entries -->
 <ul>
-  <li *ngFor="let q of quizzes">{{ q.name }}</li>
+  <li *ngFor="let q of quizzes">{{ q.name }} <button *ngIf="q.canDelete">Delete</button></li>
 </ul>
 
 <button (click)="addFunnyQuiz()">Add Funny Quiz</button>

@@ -29,7 +29,7 @@ export class AppComponent {
 
   //addFunnyQuiz = () => this.quizzes.push("Funny Quiz");
 
-  addFunnyQuiz = () => this.quizzes = ["Modern Funny Quiz", ...this.quizzes];
+  //addFunnyQuiz = () => this.quizzes = ["Modern Funny Quiz", ...this.quizzes];
 
   //addQuiz = () => window.alert(this.newQuizName);
 
@@ -44,15 +44,16 @@ export class AppComponent {
 
   /* ILEMKE: New code to add a delete button for new entries*/
   quizzes = [
-    { name: "Quiz 1" },
-    { name: "Quiz 2" },
-    { name: "Quiz 3" }
+    { name: "Quiz 1", canDelete: false },
+    { name: "Quiz 2", canDelete: false},
+    { name: "Quiz 3", canDelete: false }
   ];
 
   addQuiz = () => {
-    this.quizzes = [...this.quizzes, {name: this.newQuizName}];
+    this.quizzes = [...this.quizzes, {name: this.newQuizName, canDelete: true}];
   }
 
+  addFunnyQuiz = () => this.quizzes = [{name: "Modern Funny Quiz", canDelete: false}, ...this.quizzes];
 
 
 }

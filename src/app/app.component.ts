@@ -51,13 +51,13 @@ export class AppComponent {
   //this is javaScript 
 
   deleteQuiz(quizTodelete) {
-    //console.log(q);
+    console.log((quizTodelete);
 
     //Transform the view model... In other words, reinitialize
     //this.quizzes to a new array withour the quis to delete. which
     //is paased in as an argument or parameter 
 
-    this.quizzes = this.quizzes.filter (x => x !== quizTodelete);
+    this.quizzes = this.quizzes.filter (x => x.name !== quizTodelete.name);
 
   }
 

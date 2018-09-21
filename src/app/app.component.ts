@@ -58,7 +58,7 @@ export class AppComponent {
   // Version 1.0
   deleteThisQuiz = (quizToDelete) => {
     console.log(quizToDelete);
-    //this.quizzes = this.quizzes.filter(quiz => quiz.name != q.name);
+    //this.quizzes = this.quizzes.filter(quiz => quiz.name != q.name); 
     this.quizzes = this.quizzes.filter(quiz => quiz != quizToDelete);
   }
 

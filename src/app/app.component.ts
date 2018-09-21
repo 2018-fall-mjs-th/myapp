@@ -44,7 +44,11 @@ quizzes = [
     this.newQuizName = "";
   };
 
-
   newQuizName = "nonsense";
+
+  deleteQuiz = (q) => {
+    console.log(q.name);
+ 
+  };
 
 }

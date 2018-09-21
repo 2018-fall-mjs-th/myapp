@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  mytitle = 'myapp123456';
+  mytitle = 'WHOHOOO!';
 
 
   //  quizzes = [

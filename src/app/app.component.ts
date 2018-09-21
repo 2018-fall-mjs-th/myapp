@@ -22,8 +22,11 @@ export class AppComponent {
 
   addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz", canDelete: false }, ...this.quizzes];
 
+  removeQuiz = (q) => {
+    this.quizzes = this.quizzes.filter(quiz => quiz !== q);
+  };
+
   addQuiz = () => {
-    console.log(this.newQuizName);
     this.quizzes = [...this.quizzes, { name: this.newQuizName, canDelete: true }];
     this.newQuizName = "";
   };

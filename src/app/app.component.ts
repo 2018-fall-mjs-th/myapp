@@ -41,4 +41,8 @@ export class AppComponent {
 
   newQuizName = "nonsense";
 
+  deleteQuiz(quizToDelete) {
+    // console.log(q);
+    this.quizzes = this.quizzes.filter(x => x !== quizToDelete);
+  }
 }

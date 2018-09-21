@@ -44,4 +44,12 @@ export class AppComponent {
 
   newQuizName = "nonsense";
 
+  deleteQuiz(quizToDelete) {
+    //console.log(q);
+    //transform the view model...reinitialize this.quizzes to new array with the quiz that is deleted
+    //quiz is passed in as argument for parameter
+    this.quizzes = this.quizzes.filter(x => x !==quizToDelete);   
+
+  }
+
 }

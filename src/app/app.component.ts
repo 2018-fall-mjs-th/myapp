@@ -46,8 +46,11 @@ quizzes = [
 
   newQuizName = "nonsense";
 
-  deleteQuiz = (q) => {
-    console.log(q.name);
+  deleteQuiz = (quizToDelete) => {
+    console.log(quizToDelete.name);
+
+    //reinit array w/o deleted quiz
+  this.quizzes = this.quizzes.filter(x => x != quizToDelete);
  
   };
 

@@ -30,7 +30,7 @@ export class AppComponent {
     // passed in as an argument.
 
     // filter x (an array) and return x (a new array) keeping items where x is not equal to "quizToDelete" (ie where quizToDelete is false)
-    this.quizzes = this.quizzes.filter(x => x !== quizToDelete);
+    this.quizzes = this.quizzes.filter(x => x.name !== quizToDelete.name);
   }
 
 

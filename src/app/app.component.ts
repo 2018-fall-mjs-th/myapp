@@ -49,12 +49,15 @@ export class AppComponent {
   newQuizName = "nonsense";
 
 deleteQuiz = (quizToDelete) => {
-  //console.log(q);
+  console.log(quizToDelete);
 
   // transform the view model.. ie re-initialize this.quizzes to a new array without the deleted quiz..
   // ..which is passed in as a parameter
 
   this.quizzes = this.quizzes.filter(x => x !== quizToDelete);
+
+  //anything with same name (ie the duplicates will all delete)
+  // this.quizzes = this.quizzes.filter(x => x.name !== quizToDelete.name);
 
   }
 

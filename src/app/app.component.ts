@@ -22,9 +22,9 @@ export class AppComponent {
   // ];
 
   quizzes = [
-    { name : "quiz 1" }
-    , { name : "quiz 2" }
-    , { name : "quez 3"}
+    { name : "quiz 1", canDelete: false }
+    , { name : "quiz 2", canDelete: false }
+    , { name : "quez 3", canDelete: false }
   ];
 
 
@@ -36,17 +36,20 @@ export class AppComponent {
 
   //addFunnyQuiz = () => this.quizzes.push("Funny Quiz");
 
-  addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz"}, ...this.quizzes];
+  addFunnyQuiz = () => this.quizzes = [{ name: "Modern Funny Quiz", canDelete: false }, ...this.quizzes];
 
   //addQuiz = () => window.alert(this.newQuizName);
 
   addQuiz = () => {
     console.log(this.newQuizName);
-    this.quizzes = [...this.quizzes, {name : this.newQuizName, canDelete: true }];
+    this.quizzes = [...this.quizzes, { name : this.newQuizName, canDelete: true }];
     this.newQuizName = "";
   };
 
-
   newQuizName = "nonsense";
+
+  deleteQuiz(q) {
+    console.log(q);
+  }
 
 }

@@ -25,6 +25,14 @@ export class AppComponent {
     this.newQuizName = "";
   };
 
+  deleteQuiz(quizToDelete) {
+    // Transform the view model. Reinitialize this.quizzes to a new array without the "canDelete" quiz
+    // passed in as an argument.
+
+    // filter x (an array) and return x (a new array) keeping items where x is not equal to "quizToDelete" (ie where quizToDelete is false)
+    this.quizzes = this.quizzes.filter(x => x !== quizToDelete);
+  }
+
 
   newQuizName = "nonsense";
 

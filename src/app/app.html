@@ -1,4 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
     Welcome to {{ mytitle }}!
@@ -11,7 +10,8 @@
 <ul>
   <!-- *ngFor="let * of _" is the Angular for-each syntax -->
   <!-- *ngIf="boolean" is the Angular if syntax-->
-  <li *ngFor="let q of quizzes">{{ q.name }} <button *ngIf="q.canDelete">Delete</button></li>
+  <!-- (click) is a "parenthetical" Angular attribute-->
+  <li *ngFor="let q of quizzes">{{ q.name }} <button *ngIf="q.canDelete" (click)="deleteQuiz(q)">Delete</button></li>
 </ul>
 
 <button (click)="addFunnyQuiz()">Add Funny Quiz</button>
